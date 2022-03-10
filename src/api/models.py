@@ -11,7 +11,7 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-    def serialize(self):
+    def serialize(self): #Sirve para tener un método que devuelva valores de usuario que normalmente queremos consultar
         return {
             "id": self.id,
             "email": self.email,
