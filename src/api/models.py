@@ -8,9 +8,6 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=False)
 
-    def __repr__(self):
-        return '<User %r>' % self.username
-
     def serialize(self): #Sirve para tener un método que devuelva valores de usuario que normalmente queremos consultar
         return {
             "id": self.id,
