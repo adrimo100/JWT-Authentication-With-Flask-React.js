@@ -7,7 +7,7 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), unique=False, nullable=False)
 
-    def serialize(self): #Sirve para tener un método que devuelva valores de usuario que normalmente queremos consultar
+    def serialize(self): #Sirve para tener un método que devuelva valores de usuario que normalmente queremos consultar.
         return {
             "id": self.id,
             "email": self.email,
