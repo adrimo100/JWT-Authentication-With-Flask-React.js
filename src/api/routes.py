@@ -34,7 +34,7 @@ def singup():
     email = request.json.get("email")
     password = request.json.get("password")
 
-    user = User(email = email, password = password, is_active = True)
+    user = User(email = email, password = password)
     db.session.add(user)
     db.session.commit()
 
